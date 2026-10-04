@@ -206,7 +206,7 @@ void bms_can_data(SegmentData_t* PackData, TotalPack_t* TotalPack, FDCAN_HandleT
 
 void bsm_can(bsm_obj* bsmInfo, GPIO_Info_t* gpio_data, FDCAN_HandleTypeDef* hfdcan1) {
     // Send battery state machine outputs and state
-    uint8_t data[5];
+    uint8_t data[7];
     data[0] = (int8_t)bsmInfo->state;
     data[1] = bsmInfo->pc_enable;
     data[2] = bsmInfo->ir_plus_enable;
